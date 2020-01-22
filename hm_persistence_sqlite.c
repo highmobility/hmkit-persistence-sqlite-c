@@ -25,7 +25,6 @@ THE SOFTWARE.
 #include "hm_persistence_sqlite.h"
 #include <sqlite3.h>
 #include <string.h>
-#include "hm_cert.h"
 
 #define DATABASE_NAME "hmdata.db"
 
@@ -107,11 +106,6 @@ void hm_persistence_sqlite_add_access_cert(uint8_t *serial, uint8_t *cert, uint8
     }
 
 
-}
-
-uint32_t hm_bt_persistence_hal_erase_access_certificate(hm_certificate_t *certificate){
-  SQUNUSED(certificate);
-  return 0;
 }
 
 void hm_persistence_sqlite_get_access_cert(uint8_t *serial, uint8_t *cert, uint8_t *size){
